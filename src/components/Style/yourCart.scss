@@ -1,0 +1,158 @@
+#yourCart {
+  font-family: 'Public Sans', sans-serif;
+
+  .yourCart {
+    &--about {
+      h1 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: -1.5px;
+        color: #19272E;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: -0.2px;
+        color: #19272E;
+
+        span {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 140%;
+          color: #818EEA;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &--cardsAll {
+      display: flex;
+      justify-content: space-between;
+
+      &__cards {
+        &--card {
+          display: flex;
+          width: 633px;
+          padding: 30px 0;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.30);
+
+          img {
+            width: 240px;
+            height: 360px;
+          }
+
+          &__imgTitle {
+            padding-left: 30px;
+
+            h1 {
+              font-weight: 700;
+              font-size: 18px;
+              line-height: 120%;
+              color: #19272E;
+              padding: 15px 0 30px 0;
+              width: 285px;
+            }
+          }
+
+          span {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            color: #19272E;
+            opacity: 0.7;
+          }
+
+          p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 140%;
+            color: #19272E;
+            padding: 130px 0 10px;
+          }
+
+          h6 {
+            font-weight: 400;
+            font-size: 20px;
+            color: #818EEA;
+          }
+
+          h5 {
+            color: red;
+            font-size: 14px;
+            border-bottom: 2px solid red;
+            margin: 15px 0 0 18px;
+            height: 15px;
+            cursor: pointer;
+          }
+        }
+      }
+
+      &__summary {
+        button {
+          background: #818EEA;
+          border-radius: 8px;
+          color: white;
+          width: 360px;
+          height: 50px;
+          cursor: pointer;
+        }
+
+        padding-top: 35px;
+
+        h1 {
+          font-weight: 600;
+          font-size: 22px;
+          letter-spacing: -0.55px;
+          color: #19272E;
+          padding: 0 0 40px 0;
+        }
+
+        &--shoping {
+          display: flex;
+          gap: 170px;
+
+          p {
+            font-weight: 400;
+            font-size: 16px;
+            letter-spacing: -0.1px;
+            color: #0D0D0D;
+            padding: 17px 0;
+          }
+
+          h6 {
+            font-weight: 400;
+            font-size: 17px;
+            color: #19272E;
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        &--total {
+          display: flex;
+          gap: 285px;
+          padding-top: 30px;
+          border-top: 1px solid black;
+
+          p {
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: -0.1px;
+            color: #0D0D0D;
+            padding: 0 0 30px;
+          }
+
+          h6 {
+            font-weight: 400;
+            font-size: 16px;
+            color: #818EEA;;
+          }
+        }
+      }
+    }
+  }
+}

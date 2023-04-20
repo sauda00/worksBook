@@ -1,4 +1,5 @@
 import './App.scss';
+
 import Header from "./components/header";
 import Footer from "./components/footer";
 import HomeImage from "./components/Home/HomeImage";
@@ -9,9 +10,14 @@ import SwiperBooks from "./components/Home/SwiperBooks";
 import UseBook from "./components/Home/UseBook/UseBook";
 
 
+import Bookshop from "./components/Bookshop";
+import YourCart from "./components/YourCart";
+
+
 function App() {
   return (
     <div className="App">
+
         <Layout>
             <HomeImage/>
             <Pagebook/>
@@ -19,6 +25,10 @@ function App() {
             <SwiperBooks/>
             <UseBook/>
         </Layout>
+
+      <Bookshop/>
+        <YourCart/>
+
     </div>
   );
 }

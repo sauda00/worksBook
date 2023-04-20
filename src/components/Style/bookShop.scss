@@ -1,0 +1,98 @@
+#bookShop{
+  padding: 70px 0;
+  font-family: 'Public Sans',sans-serif;
+  .bookShop{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &--about{
+      &__title{
+        display: flex;
+        align-items:flex-start;
+        h1{
+          width: 300px;
+          height: 44px;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 120%;
+          color: #19272E;
+          padding: 0 10px 10px 0;
+        }
+        .aioutline{
+          font-size: 20px;
+          padding: 0 5px;
+        }
+      }
+      span{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+        color: #19272E;
+        opacity: 0.7;
+      }
+      p{
+        width: 350px;
+        height: 100px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 140%;
+        color: #19272E;
+        padding: 30px 0;
+      }
+      h4{
+        font-size: 25px;
+        line-height: 26px;
+        letter-spacing: -0.3px;
+        color: #818EEA;
+        padding: 0 0 20px 0;
+        font-weight: 400;
+      }
+      button{
+        background: #818EEA;
+        border-radius: 8px;
+        width: 350px;
+        height: 50px;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      &__btn{
+        display: flex;
+        h6{
+          padding: 12px 10px 12px 10px;
+          width: 50px;
+          text-align: center;
+          font-size: 17px;
+          border: 1px solid #818EEA;
+          border-radius: 8px;
+          margin-left: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+
+@media(max-width:1040px ){
+  .container{width: 960px}
+}
+@media (max-width:959px ) {
+  .container{width:840px }
+  #bookShop .bookShop--about button {
+    width: 320px;
+  }
+}
+@media (max-width:839px ) {
+  .container{width:710px }
+  #bookShop .bookShop {
+    flex-direction: column;
+    gap: 50px;
+    &--about{
+      margin-left: 99px;
+      p{
+        width: 385px;
+      }
+    }
+  }
+}

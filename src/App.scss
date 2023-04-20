@@ -1,4 +1,5 @@
 @import "../src/components/Style/header.scss";
+
 @import "../src/components/Style/footer";
 @import "../src/components/Home/StyleImage/Image";
 @import "../src/components/Home/StyleImage/Pagebook";
@@ -13,3 +14,7 @@ body,html{
   scroll-behavior: smooth;
   font-family: "Public Sans",sans-serif;
 }
+
+@import "../src/components/Style/bookShop";
+@import "../src/components/Style/yourCart";
+
