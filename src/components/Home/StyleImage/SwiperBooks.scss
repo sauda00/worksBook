@@ -1,0 +1,41 @@
+#swiperBooks {
+  .swiperBooks {
+    h1{
+      margin-left: 40px;
+      padding: 20px 0;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 48px;
+    }
+    &--swiper {
+      display: flex;
+      overflow: auto;
+      scroll-snap-type: x mandatory;
+      padding: 12px;
+      gap: 12px;
+      scroll-padding: 10px;
+      margin: 0 0 70px 0;
+      cursor: all-scroll;
+      .swiper.item {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+      }
+      &__swiper1 {
+        margin: 0 20px;
+        h2{
+          font-style: normal;
+          font-weight: 700;
+          font-size: 18px;
+           color: #19272E;
+        }
+        p{
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          color: #19272E;
+        }
+      }
+    }
+  }
+}

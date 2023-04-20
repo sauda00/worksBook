@@ -6,6 +6,12 @@ import book from '../../imgsan/books-hero.png'
 
 const BookShop = () => {
     return (
+
+        <div>
+            <h2>
+
+            </h2>
+
         <div id='bookShop'>
             <div className="container">
                 <div className="bookShop">
@@ -30,6 +36,7 @@ const BookShop = () => {
                     </div>
                 </div>
             </div>
+
         </div>
     );
 };

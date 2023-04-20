@@ -5,6 +5,14 @@ import card2 from '../../imgsan/cards-2.png'
 import { AiOutlineRight } from "react-icons/ai";
 
 
+const Nav = () => {
+    return (
+        <div>
+            <h4>
+           jdsjk;fnds
+            </h4>
+
+
 const YourCart = () => {
     return (
         <div id='yourCart'>
@@ -67,8 +75,13 @@ const YourCart = () => {
 
                 </div>
             </div>
+
         </div>
     );
 };
 
+
+export default Nav;
+
 export default YourCart;
+

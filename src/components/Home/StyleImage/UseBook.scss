@@ -1,0 +1,21 @@
+#useBook{
+  .useBook{
+    h1{
+      font-size: 48px;
+      line-height: 120%;
+      text-align: center;
+      color: #19272E;
+    }
+    &--testBook{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      p{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+        color: #19272E;
+      }
+    }
+  }
+}
