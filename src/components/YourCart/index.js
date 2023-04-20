@@ -1,11 +1,13 @@
 import React from 'react';
 
-const Index = () => {
+const Nav = () => {
     return (
         <div>
-            <h4>fghbjnkl</h4>
+            <h4>
+           jdsjk;fnds
+            </h4>
         </div>
     );
 };
 
-export default Index;
+export default Nav;

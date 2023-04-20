@@ -1,0 +1,15 @@
+@import "../src/components/Style/header.scss";
+@import "../src/components/Style/footer";
+@import "../src/components/Home/StyleImage/Image";
+@import "../src/components/Home/StyleImage/Pagebook";
+@import "../src/components/Home/StyleImage/NewBooks";
+@import "../src/components/Home/StyleImage/SwiperBooks";
+@import "../src/components/Home/StyleImage/UseBook";
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Public+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+body,html{
+  scroll-behavior: smooth;
+  font-family: "Public Sans",sans-serif;
+}

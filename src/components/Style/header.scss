@@ -1,0 +1,33 @@
+#header {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px 0;
+  position: fixed;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  z-index: 2;
+  .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &--header1{
+        a{
+          padding: 0 20px;
+          font-size: 19px;
+          line-height: 20px;
+          color: #19272E;
+          &:hover{
+            color: #818EEA;
+            border-bottom: 1px solid #818EEA ;
+          }
+        }
+      }
+      &--header2{
+        display: flex;
+        align-items: center;
+        &__icon{
+          margin: 0 20px;
+          font-size: 20px;
+        }
+      }
+    }
+}
