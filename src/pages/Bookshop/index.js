@@ -1,17 +1,12 @@
 import React from 'react';
 import { AiOutlineHeart } from "react-icons/ai";
 import { AiOutlineShareAlt } from "react-icons/ai";
-import book from '../../imgsan/books-hero.png'
+import book from '../../img/books-hero.png'
+import {Link} from "react-router-dom";
 
 
 const BookShop = () => {
     return (
-
-        <div>
-            <h2>
-
-            </h2>
-
         <div id='bookShop'>
             <div className="container">
                 <div className="bookShop">
@@ -29,7 +24,7 @@ const BookShop = () => {
                             incididunt ut labore et dolore magna aliqua.</p>
                         <h4>$99</h4>
                         <div className="bookShop--about__btn">
-                            <button>Add to Cart </button>
+                           <Link to={'/allBooks/bookShop/yourCart'}><button>Add to Cart </button></Link>
                             <h6 className= 'click'><span>-</span> 1 <span>+</span></h6>
                         </div>
 

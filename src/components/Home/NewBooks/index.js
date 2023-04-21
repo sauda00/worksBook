@@ -1,7 +1,8 @@
 import React from 'react';
-import Books1 from "../../../assets/imgA/Books1.png"
-import Books2 from "../../../assets/imgA/Books2.png"
-import Books3 from "../../../assets/imgA/Books3.png"
+
+import Books1 from "../../../img/Books1.png"
+import Books2 from "../../../img/Books2.png"
+import Books3 from "../../../img/Books3.png"
 
 
 const NewBooks = () => {
@@ -9,7 +10,7 @@ const NewBooks = () => {
         <div id="newBooks">
             <div className="container">
                 <div className="newBooks">
-                    <h1>New Books</h1>
+                        <h1>New Books</h1>
                     <div className="newBooks--books">
                         <div className="newBooks--books__books1">
                             <img src={Books1} alt=""/>

@@ -1,19 +1,26 @@
 import React from 'react';
-import swBook from "../../../assets/imgA/swBook.png";
-import swBook2 from "../../../assets/imgA/swBook2.png";
-import swBook3 from "../../../assets/imgA/swBook3.png";
-import swBook4 from "../../../assets/imgA/swBook4.png";
-import swBook5 from "../../../assets/imgA/swBook5.png";
-import swBook6 from "../../../assets/imgA/Books3.png";
-import swBook7 from "../../../assets/imgA/Books2.png";
+
+import swBook from '../../../img/swBook.png'
+import swBook2 from '../../../img/swBook2.png'
+import swBook3 from '../../../img/swBook3.png'
+import swBook4 from '../../../img/swBook4.png'
+import swBook5 from '../../../img/swBook5.png'
+import swBook6 from '../../../img/Books3.png'
+import swBook7 from '../../../img/Books2.png'
+import {Link} from "react-router-dom";
 
 
 
 const SwiperBooks = () => {
     return (
         <div id="swiperBooks">
+            <div className="container">
                 <div className="swiperBooks">
-                    <h1>Books</h1>
+                    <div className="swiperBooks--text">
+                        <h1>Books</h1>
+                        <Link to={'/allBooks'}><h3>View all</h3></Link>
+                    </div>
+
                     <div className="swiperBooks--swiper">
                     <div className="swiperBooks--swiper__swiper1">
                         <img src={swBook} alt=""/>
@@ -63,6 +70,7 @@ const SwiperBooks = () => {
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
     );
 };

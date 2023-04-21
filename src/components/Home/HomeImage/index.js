@@ -1,20 +1,26 @@
 import React from 'react';
-import Main from "../../../assets/imgA/Main.jpg"
+import Pagebook from "../Pagebook";
+import NewBooks from "../NewBooks";
+import SwiperBooks from "../SwiperBooks";
+import UseBook from "../UseBook/UseBook";
+
 
 const HomeImage = () => {
     return (
+        <>
         <div id="Image">
-             <div className="image">
-                 <div className="image--img">
-                     <img src={Main} alt="" className="img"/>
-                 </div>
-                 <div className="image--letters">
-                         <h1>Welcome to our Bookshop</h1>
-                     <p>A place where you can get all the books you want!</p>
-                 </div>
-
-             </div>
+            <div className="container">
+                <div className="img">
+                        <h1>Welcome to our Bookshop</h1>
+                        <p>A place where you can get all the books you want!</p>
+                </div>
+            </div>
         </div>
+            <Pagebook/>
+            <NewBooks/>
+            <SwiperBooks/>
+            <UseBook/>
+        </>
     );
 };
 

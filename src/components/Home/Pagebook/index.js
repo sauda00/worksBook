@@ -1,10 +1,11 @@
 import React from 'react';
-import alien from "../../../assets/imgA/inaplat.svg"
-import giraffe from "../../../assets/imgA/jiraf.svg"
-import brain from "../../../assets/imgA/brain.svg"
-import apple from "../../../assets/imgA/aplle.svg"
-import spy from "../../../assets/imgA/uury.svg"
-import money from "../../../assets/imgA/money.svg"
+import alien from "../../../img/inaplat.svg"
+import giraffe from "../../../img/jiraf.svg"
+import brain from "../../../img/brain.svg"
+import apple from "../../../img/aplle.svg"
+import spy from "../../../img/uury.svg"
+import money from "../../../img/money.svg"
+import {Link} from "react-router-dom";
 
 
 const Pagebook = () => {
@@ -12,7 +13,10 @@ const Pagebook = () => {
         <div id="Page">
             <div className="container">
                 <div className="page">
-                    <h1>Genres</h1>
+                    <div className="page--text">
+                        <h1>Genres</h1>
+                        <Link to={'/allBooks'}><h3>View all</h3></Link>
+                    </div>
                     <div className="page--photo">
                         <div className="page--photo__photo1">
                             <img src={alien} alt=""/>

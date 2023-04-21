@@ -1,13 +1,11 @@
-@import "../src/components/Style/header.scss";
-
-@import "../src/components/Style/footer";
-@import "../src/components/Home/StyleImage/Image";
-@import "../src/components/Home/StyleImage/Pagebook";
-@import "../src/components/Home/StyleImage/NewBooks";
-@import "../src/components/Home/StyleImage/SwiperBooks";
-@import "../src/components/Home/StyleImage/UseBook";
+@import "../src/style/footer";
+@import "../src/style/header";
+@import "../src/style/Image";
+@import "../src/style/NewBooks";
+@import "../src/style/Pagebook";
+@import "../src/style/SwiperBooks";
+@import "../src/style/UseBook";
 @import url('https://fonts.googleapis.com/css2?family=Itim&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Public+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
 
 
 body,html{
@@ -15,6 +13,17 @@ body,html{
   font-family: "Public Sans",sans-serif;
 }
 
-@import "../src/components/Style/bookShop";
-@import "../src/components/Style/yourCart";
+@import "../src/style/bookShop";
+@import "../src/style/yourCart";
 
+#error{
+  background: url("img/Main.jpg") no-repeat center/cover;
+text-align: center;
+  height: 600px;
+  h1{
+    color: red;
+    font-size: 50px;
+    font-weight: 900;
+    transform: translateY(230px);
+  }
+}

@@ -1,16 +1,11 @@
 import React from 'react';
-import card from '../../imgsan/books-hero.png'
-import card1 from '../../imgsan/cards-1.png'
-import card2 from '../../imgsan/cards-2.png'
+
+import card from '../../img/books-hero.png'
+import card1 from '../../img/cards-1.png'
+import card2 from '../../img/cards-2.png'
 import { AiOutlineRight } from "react-icons/ai";
+import {Link} from "react-router-dom";
 
-
-const Nav = () => {
-    return (
-        <div>
-            <h4>
-           jdsjk;fnds
-            </h4>
 
 
 const YourCart = () => {
@@ -20,7 +15,7 @@ const YourCart = () => {
                 <div className="yourCart">
                     <div className="yourCart--about">
                         <h1>YourCart</h1>
-                            <p>Not ready to checkout? <span>Continue Shopping</span></p>
+                            <p>Not ready to checkout? <Link to={'/allBooks/bookShop'}><span>Continue Shopping</span></Link> </p>
                     </div>
                     <div className="yourCart--cardsAll">
                         <div className="yourCart--cardsAll__cards">
@@ -81,7 +76,7 @@ const YourCart = () => {
 };
 
 
-export default Nav;
+
 
 export default YourCart;
 

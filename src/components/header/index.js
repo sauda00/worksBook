@@ -1,6 +1,7 @@
 import React from 'react';
 import {BiSearch} from "react-icons/bi";
 import {BsBag} from "react-icons/bs";
+import {Navigate, NavLink} from "react-router-dom";
 
 const Header = () => {
     return (
@@ -8,18 +9,18 @@ const Header = () => {
             <div className="container">
             <div className="header">
                    <div className="header--header1">
-                       <a href="">Bookshop</a>
-                       <a href="">Categories</a>
-                       <a href="">Recent</a>
-                       <a href="">Books</a>
-                       <a href="">About Us</a>
+                       <NavLink to={'/'}>Bookshop</NavLink>
+                       <NavLink to={'/categories'}>Categories</NavLink>
+                       <NavLink to={'/recent'}>Recent</NavLink>
+                       <NavLink to={'/allBooks'}>Books</NavLink>
+                       <NavLink to={'/useBook'}>About Us</NavLink>
                    </div>
                    <div className="header--header2">
                        <div className="header--header2__icon">
                            <BiSearch/>
                        </div>
                        <div className="header--header2__icon">
-                           <BsBag className="icon2"/>
+                          <NavLink to={'/yourCart'}><BsBag className="header--header2__icon--icon2"/></NavLink>
                        </div>
                        </div>
                    </div>

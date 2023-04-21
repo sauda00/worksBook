@@ -1,33 +1,36 @@
 import './App.scss';
 
-import Header from "./components/header";
-import Footer from "./components/footer";
+
 import HomeImage from "./components/Home/HomeImage";
-import Pagebook from "./components/Home/Pagebook";
-import Layout from "./components/Layout/Layout";
-import NewBooks from "./components/Home/NewBooks";
-import SwiperBooks from "./components/Home/SwiperBooks";
+import Bookshop from "./pages/Bookshop";
+import YourCart from "./pages/YourCart";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import {Route, Routes} from "react-router-dom";
+import AllBooks from "./components/AllBooks";
 import UseBook from "./components/Home/UseBook/UseBook";
+import Categories from "./components/Categories";
 
-
-import Bookshop from "./components/Bookshop";
-import YourCart from "./components/YourCart";
 
 
 function App() {
   return (
     <div className="App">
 
-        <Layout>
-            <HomeImage/>
-            <Pagebook/>
-            <NewBooks/>
-            <SwiperBooks/>
-            <UseBook/>
-        </Layout>
 
-      <Bookshop/>
-        <YourCart/>
+        <Header/>
+        <Routes>
+            <Route path={'/'} element={<HomeImage/>}/>
+            <Route path={'/allBooks'} element={<AllBooks/>}/>
+            <Route path={'/useBook'} element={<UseBook/>}/>
+            <Route path={'/categories'} element={<Categories/>}/>
+            <Route path={'/recent'} element={<Categories/>}/>
+            <Route path={'/allBooks/bookShop'} element={<Bookshop/>}/>
+            <Route path={'/allBooks/bookShop/yourCart'} element={<YourCart/>}/>
+            <Route path={'/yourCart'} element={<YourCart/>}/>
+        </Routes>
+        <Footer/>
+
 
     </div>
   );
