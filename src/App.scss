@@ -6,15 +6,15 @@
 @import "../src/style/SwiperBooks";
 @import "../src/style/UseBook";
 @import url('https://fonts.googleapis.com/css2?family=Itim&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Public+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import "../src/style/bookShop";
+@import "../src/style/yourCart";
 
 body,html{
   scroll-behavior: smooth;
   font-family: "Public Sans",sans-serif;
 }
 
-@import "../src/style/bookShop";
-@import "../src/style/yourCart";
+
 
 #error{
   background: url("img/Main.jpg") no-repeat center/cover;
