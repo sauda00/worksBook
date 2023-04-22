@@ -1,13 +1,14 @@
 import React from 'react';
-import mark from "../../image/mark.png"
-import rules from "../../image/rules.png"
-import act from "../../image/act.png"
-import mole from "../../image/mole.png"
-import potter from "../../image/potter.png"
-import us from "../../image/us.png"
-import start from "../../image/start.png"
-import heart from "../../image/heart.png"
-import shoes from "../../image/shoes.png"
+import mark from "../../img/mark.png"
+import rules from "../../img/rules.png"
+import act from "../../img/act.png"
+import mole from "../../img/mole.png"
+import potter from "../../img/potter.png"
+import us from "../../img/us.png"
+import start from "../../img/start.png"
+import heart from "../../img/heart.png"
+import shoes from "../../img/shoes.png"
+import {Link} from "react-router-dom";
 
 const AllBooks = () => {
     return (
@@ -83,7 +84,7 @@ const AllBooks = () => {
                             <p>by Rick Rubin with Neil Strauss</p>
                         </div>
                         <div className="genres--photo__table">
-                            <img src={mole} alt=""/>
+                           <Link to={'/bookShop'}> <img src={mole} alt=""/></Link>
                             <h4>THE BOY, THE MOLE, THE FOX AND THE HORSE</h4>
                             <p>by Charlie Mackesy</p>
                         </div>

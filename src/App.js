@@ -28,6 +28,7 @@ function App() {
             <Route path={'/allBooks/bookShop'} element={<Bookshop/>}/>
             <Route path={'/allBooks/bookShop/yourCart'} element={<YourCart/>}/>
             <Route path={'/yourCart'} element={<YourCart/>}/>
+            <Route path={'/bookShop'} element={<Bookshop/>}/>
         </Routes>
         <Footer/>
 
