@@ -1,17 +1,18 @@
 #Image{
+  background: url("../../../image/cool.png") no-repeat center /cover;
+  min-height: 80vh;
   .image{
-    padding-top: 110px;
+    //padding-top: 110px;
     &--img{
+      //position:absolute;
       img{
-        width: 100%;
-        position:absolute;
-
+        //width: 100%;
       }
     }
     &--letters{
-      position: relative;
+      //position: relative;
       text-align: center;
-      top: 200px;
+      padding-top: 200px;
       h1{
         font-style: normal;
         font-weight: 700;

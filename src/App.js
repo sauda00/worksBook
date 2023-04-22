@@ -1,31 +1,33 @@
 import './App.scss';
 
-import Header from "./components/header";
-import Footer from "./components/footer";
+
 import HomeImage from "./components/Home/HomeImage";
 import Pagebook from "./components/Home/Pagebook";
-import Layout from "./components/Layout/Layout";
 import NewBooks from "./components/Home/NewBooks";
 import SwiperBooks from "./components/Home/SwiperBooks";
 import UseBook from "./components/Home/UseBook/UseBook";
 
-
+ 
 import Bookshop from "./components/Bookshop";
 import YourCart from "./components/YourCart";
+import Header from "./components/Header";
+import Footer from "./components/footer";
+import AllBooks from "./components/AllBooks";
 
 
 function App() {
   return (
     <div className="App">
+        {/*<Route path={'/'} element={<Header/>}/>*/}
 
-        <Layout>
+        <Header/>
             <HomeImage/>
-            <Pagebook/>
+        <AllBooks/>
+        <Pagebook/>
             <NewBooks/>
             <SwiperBooks/>
             <UseBook/>
-        </Layout>
-
+        <Footer/>
       <Bookshop/>
         <YourCart/>
 
