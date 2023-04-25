@@ -31,19 +31,41 @@
       }
     }
     &--nav2{
-      h3{
-        font-weight: 600;
-        font-size: 16px;
-        color: #FFFFFF;
-        margin: 20px 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      &__nav3{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 5px 50px;
+        a{
+          padding: 6px 0;
+          color: white;
+          font-size: 20px;
+        }
       }
-      p{
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 26px;
-        color: #FFFFFF;
-        opacity: 0.5;
+
+    &__nav4{
+      display: flex;
+      flex-direction: column;
+      &--in{
+        padding: 25px 0;
       }
+      a{
+        font-size: 25px;
+        padding: 10px 15px;
+        color: #0D0D0D;
+      }
+      &--tel{
+        display: flex;
+        flex-direction: column;
+        &__vk{
+          font-size: 20px;
+        }
+
+      }
+    }
     }
   }
 }

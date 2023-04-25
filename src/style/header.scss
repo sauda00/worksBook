@@ -7,35 +7,100 @@
   width: 100%;
   z-index: 2;
   .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      &--header1{
-        .active{
-          color: #818EEA;
-        }
-        a{
-          padding: 0 20px;
-          font-size: 19px;
-          line-height: 20px;
-          color: #19272E;
-          &:hover{
-            color: #818EEA;
-            border-bottom: 1px solid #818EEA ;
-          }
-        }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--header1 {
+      .active {
+        color: #818EEA;
       }
-      &--header2{
-        display: flex;
-        align-items: center;
-        &__icon{
-          margin: 0 20px;
-          font-size: 20px;
-          color: #19272E;
-          &--icon2{
-            color: #19272E;
-          }
+
+      a {
+        padding: 0 20px;
+        font-size: 19px;
+        line-height: 20px;
+        color: #19272E;
+
+        &:hover {
+          color: #818EEA;
+          border-bottom: 1px solid #818EEA;
         }
       }
     }
-}
+
+    &--box {
+      position: absolute;
+      top: -23%;
+      right: 8%;
+      height: 40px;
+      transform: translate(-10%, 50%);
+      background: transparent;
+      border-radius: 30px;
+      padding: 10px;
+
+      &:hover {
+        background: aqua;
+      }
+
+      &:hover > .header--box__txt {
+        width: 150px;
+        padding: 0 6px;
+        background: #19272E;
+        border-radius: 30px;
+        border: 1px solid green;
+      }
+
+      &:hover > .header--box__btn {
+        color: black;
+        float: left;
+      }
+
+      &__txt {
+        border: none;
+        background: transparent;
+        outline: none;
+        float: left;
+        padding: 0;
+        color: #FFFFFF;
+        font-size: 16px;
+        transition: 0.4s;
+        width: 0;
+        height: 40px;
+      }
+
+      &__btn {
+        color: #0D0D0D;
+        float: right;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        border-radius: 50%;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+      }
+    }
+
+    //&--header2 {
+    //  display: flex;
+    //  align-items: center;
+
+      //  &__icon{
+      //    position: relative;
+      //    margin: 0 20px;
+      //    font-size: 20px;
+      //    color: #19272E;
+      //&--input2{
+      //  position: absolute;
+      //  top: 10px;
+      //  right: 10px;
+      //  cursor: pointer;
+      //}
+      //&--icon2{
+      //color: #19272E;
+    }
+  }
+

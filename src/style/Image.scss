@@ -1,19 +1,21 @@
 #Image{
-  padding: 250px 0;
+  //padding: 250px 0;
   background: url("../img/Main.jpg") no-repeat center/cover;
+  min-height: 80vh;
+
 .img{
-          text-align: center;
-          h1{
-            font-style: normal;
-            font-weight: 700;
-            font-size: 48px;
-            color: #FFFFFF;
-          }
-          p{
-            font-weight: 400;
-            font-size: 18px;
-            color: #19272E;
-            line-height: 70px;
-          }
+  text-align: center;
+  h1{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    color: #FFFFFF;
+  }
+  p{
+    font-weight: 400;
+    font-size: 18px;
+    color: #19272E;
+    line-height: 70px;
+  }
 }
 }

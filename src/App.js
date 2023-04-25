@@ -1,6 +1,4 @@
 import './App.scss';
-
-
 import HomeImage from "./components/Home/HomeImage";
 import Bookshop from "./pages/Bookshop";
 import YourCart from "./pages/YourCart";
@@ -11,13 +9,9 @@ import AllBooks from "./components/AllBooks";
 import UseBook from "./components/Home/UseBook/UseBook";
 import Categories from "./components/Categories";
 
-
-
 function App() {
   return (
     <div className="App">
-
-
         <Header/>
         <Routes>
             <Route path={'/'} element={<HomeImage/>}/>
@@ -31,8 +25,6 @@ function App() {
             <Route path={'/bookShop'} element={<Bookshop/>}/>
         </Routes>
         <Footer/>
-
-
     </div>
   );
 }

@@ -15,17 +15,21 @@ const Header = () => {
                        <NavLink to={'/allBooks'}>Books</NavLink>
                        <NavLink to={'/useBook'}>About Us</NavLink>
                    </div>
-                   <div className="header--header2">
-                       <div className="header--header2__icon">
+
+                   <div className="header--box">
+                       <a className="header--box__btn" href="#">
                            <BiSearch/>
+                       </a>
+                           <input className='header--box__txt' type="text" placeholder="search"/>
+
                        </div>
-                       <div className="header--header2__icon">
-                          <NavLink to={'/yourCart'}><BsBag className="header--header2__icon--icon2"/></NavLink>
-                       </div>
+
+                          <NavLink to={'/yourCart'}>
+                              <BsBag className="header--header1__point"/>
+                          </NavLink>
                        </div>
                    </div>
            </div>
-        </div>
     );
 };
 

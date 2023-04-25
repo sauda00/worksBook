@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import swBook from '../../../img/swBook.png'
 import swBook2 from '../../../img/swBook2.png'
@@ -9,9 +9,26 @@ import swBook6 from '../../../img/Books3.png'
 import swBook7 from '../../../img/Books2.png'
 import {Link} from "react-router-dom";
 
-
-
 const SwiperBooks = () => {
+    const [SwiperBooks, setSwiperBooks] = useState([])
+
+    const getAllSwiperBooks = async () => {
+        const url = await fetch(`https://64479f0850c253374429d696.mockapi.io/task`)
+        const data = await url.json()
+        setSwiperBooks(data)
+    }
+    // const [SwiperBooks, setSwiperBooks] = useState([])
+    //
+    // const getSwiperBooks = async (key) => {
+    //     const response = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=1`)
+    //     const data = await response.data
+    //     setSwiperBooks(data.results)
+    // }
+
+    useEffect(() => {
+        getAllSwiperBooks()
+    }, [])
+
     return (
         <div id="swiperBooks">
             <div className="container">
