@@ -1,0 +1,12 @@
+@media (max-width: 1140px) {
+  .container{
+    width: 90%; !important;
+  }
+  #useBook{
+    .useBook{
+      &--testBook p {
+        width: 535px; !important;
+      }
+    }
+  }
+}
