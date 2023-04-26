@@ -6,7 +6,15 @@ import apple from "../../../img/aplle.svg"
 import spy from "../../../img/uury.svg"
 import money from "../../../img/money.svg"
 import {Link} from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/pagination";
+import "swiper/css";
 
+
+
+
+
+import { Pagination } from "swiper";
 
 const Pagebook = () => {
     return (
@@ -18,31 +26,43 @@ const Pagebook = () => {
                         <Link to={'/allBooks'}><h3>View all</h3></Link>
                     </div>
                     <div className="page--photo">
-                        <div className="page--photo__photo1">
+                    <Swiper
+                        slidesPerView={6}
+                        spaceBetween={30}
+                        centeredSlides={true}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        modules={[Pagination]}
+                        className="mySwiper"
+                    >
+                        <SwiperSlide><div className="page--photo__photo1">
                             <img src={alien} alt=""/>
                             <p>Sci-Fi</p>
-                        </div>
-                        <div className="page--photo__photo1">
+                        </div></SwiperSlide>
+                        <SwiperSlide><div className="page--photo__photo1">
                             <img src={giraffe} alt=""/>
                             <p>For kids-</p>
-                        </div>
-                        <div className="page--photo__photo1">
+                        </div></SwiperSlide>
+                        <SwiperSlide><div className="page--photo__photo1">
                             <img src={brain} alt=""/>
                             <p>Psychology</p>
-                        </div>
-                        <div className="page--photo__photo1">
+                        </div></SwiperSlide>
+                        <SwiperSlide><div className="page--photo__photo1">
                             <img src={apple} alt=""/>
                             <p>Romantic</p>
-                        </div>
-                        <div className="page--photo__photo1">
+                        </div></SwiperSlide>
+                        <SwiperSlide><div className="page--photo__photo1">
                             <img src={spy} alt=""/>
                             <p>Detective</p>
-                        </div>
-                        <div className="page--photo__photo1">
+                        </div></SwiperSlide>
+                        <SwiperSlide><div className="page--photo__photo1">
                             <img src={money} alt=""/>
                             <p>Finance</p>
-                        </div>
+                        </div></SwiperSlide>
+                    </Swiper>
                     </div>
+
                 </div>
             </div>
         </div>
