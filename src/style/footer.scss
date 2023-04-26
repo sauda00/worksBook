@@ -50,7 +50,12 @@
       display: flex;
       flex-direction: column;
       &--in{
-        padding: 25px 0;
+        padding: 35px 0;
+        a{
+          svg{
+            color: purple;
+          }
+        }
       }
       a{
         font-size: 25px;
@@ -60,8 +65,16 @@
       &--tel{
         display: flex;
         flex-direction: column;
+        a{
+          color: #FFFFFF;
+        }
+        h1{
+          color: #FFFFFF;
+          padding-bottom: 10px;
+        }
         &__vk{
           font-size: 20px;
+          color: purple;
         }
 
       }
