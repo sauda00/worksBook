@@ -1,20 +1,21 @@
 #footer{
   background: #818EEA;
   padding: 80px 0;
-  .footer{
+  .footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 50px;
 
-    &--nav{
-       h1{
-         font-weight: 600;
-         font-size: 36px;
-         line-height: 44px;
-         color: #FFFFFF;
-       }
-      input{
+    &--nav {
+      h1 {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 44px;
+        color: #FFFFFF;
+      }
+
+      input {
         background: none;
         border: 0.5px solid #FFFFFF;
         border-radius: 8px;
@@ -22,7 +23,8 @@
         height: 35px;
         padding: 0 20px;
       }
-      p{
+
+      p {
         font-weight: 400;
         font-size: 14px;
         line-height: 16px;
@@ -30,58 +32,70 @@
         padding: 25px 0;
       }
     }
-    &--nav2{
+
+    &--nav2 {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
-      &__nav3{
+
+      &__nav3 {
         display: flex;
         flex-direction: column;
         align-items: start;
         padding: 5px 50px;
-        a{
+
+        a {
           padding: 6px 0;
           color: white;
           font-size: 20px;
         }
       }
 
-    &__nav4{
-      display: flex;
-      flex-direction: column;
-      &--in{
-        padding: 35px 0;
-        a{
-          svg{
-            color: purple;
-          }
-        }
-        padding: 25px 0;
-      }
-      a{
-        font-size: 25px;
-        padding: 10px 15px;
-        color: #0D0D0D;
-      }
-      &--tel{
+      &__nav4 {
         display: flex;
         flex-direction: column;
-        a{
-          color: #FFFFFF;
-        }
-        h1{
-          color: #FFFFFF;
-          padding-bottom: 10px;
-        }
-        &__vk{
-          font-size: 20px;
-          color: purple;
-        &__vk{
-          font-size: 20px;
+
+        &--in {
+          padding: 35px 0;
+
+          a {
+            svg {
+              color: purple;
+            }
+          }
+
+          //padding: 25px 0;
         }
 
+        a {
+          font-size: 25px;
+          padding: 10px 15px;
+          color: #0D0D0D;
+        }
+
+        &--tel {
+          display: flex;
+          flex-direction: column;
+
+          a {
+            color: #FFFFFF;
+          }
+
+          h1 {
+            color: #FFFFFF;
+            padding-bottom: 10px;
+          }
+
+          &__vk {
+            font-size: 20px;
+            color: purple;
+
+            &__vk {
+              font-size: 20px;
+            }
+
+          }
+        }
       }
     }
-    }
-  }
-}
+  }}
