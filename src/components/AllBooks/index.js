@@ -12,7 +12,9 @@ import {Link} from "react-router-dom";
 import axios from "axios";
 
 
-const AllBooks = () => {
+const AllBooks = ({books}) => {
+    console.log(books)
+    console.log(2)
   const [allBooks,setAllBooks] = useState([])
     const getAllBooks = ()=>{
         axios(`https://www.googleapis.com/books/v1/volumes?q=books-all&key=AIzaSyAaebEgHTVWHIhfiv--MWYjjxsUNyvn0Hc`)
@@ -35,7 +37,10 @@ const AllBooks = () => {
                     <h2>Filters</h2>
                     <a href="#">Clear filters</a>
                 </div>
-                <select>
+                <select className='selec'>
+                    <option>
+                        Popular
+                    </option>
                     <option>
                         Popular
                     </option>
@@ -88,13 +93,16 @@ const AllBooks = () => {
                             return(
                                 <>
                                 <div className="genres--photo__table">
+                                    <Link to={'/allBooks/bookShop'}>
                                     <img style={{borderRadius:'10px'}} width={200} height={300} src={img} alt=""/>
                                     <h3 style={{width:'200px'}}>{el.volumeInfo.title}</h3>
+                                    </Link>
                                 </div>
                                 </>
                             )
                         })
                     }
+
 
                 {/*<div className="genres--photo__table">*/}
                 {/*    <img src={mark} alt=""/>*/}

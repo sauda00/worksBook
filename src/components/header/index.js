@@ -16,7 +16,7 @@ const Header = () => {
                 .then(res=>setBooks(res.data.items))
         }
     }
- const all = <AllBooks books={books}/>
+
     return (
         <div id="header">
             <div className="container">
@@ -25,7 +25,7 @@ const Header = () => {
                        <NavLink to={'/'}>Bookshop</NavLink>
                        <NavLink to={'/categories'}>Categories</NavLink>
                        <NavLink to={'/recent'}>Recent</NavLink>
-                       {<NavLink books={books} to={'/allBooks'}>Books</NavLink>}
+                       <NavLink to={'/allBooks'}>Books</NavLink>
                        <NavLink to={'/useBook'}>About Us</NavLink>
                    </div>
                 <div className="header--boxAll">
