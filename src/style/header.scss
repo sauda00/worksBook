@@ -12,6 +12,9 @@
     align-items: center;
 
     &--header1 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       .active {
         color: #818EEA;
       }
@@ -29,78 +32,64 @@
       }
     }
 
-    &--box {
-      position: absolute;
-      top: -23%;
-      right: 8%;
-      height: 40px;
-      transform: translate(-10%, 50%);
-      background: transparent;
-      border-radius: 30px;
-      padding: 10px;
-
-      &:hover {
-        background: aqua;
-      }
-
-      &:hover > .header--box__txt {
-        width: 150px;
-        padding: 0 6px;
-        background: #19272E;
+    &--boxAll {
+      display: flex;
+      align-items: center;
+      a{margin-left: 10px}
+      &__box {
+        position: absolute;
+        top: -25%;
+        right: 8%;
+        height: 40px;
+        transform: translate(-25%, 50%);
+        background: transparent;
         border-radius: 30px;
-        border: 1px solid green;
+        padding: 10px;
+
+        &:hover {
+          background: aqua;
+        }
+
+        &:hover > .header--boxAll__box--txt {
+          width: 150px;
+          padding: 0 6px;
+          background: #19272E;
+          border-radius: 30px;
+          border: 1px solid green;
+        }
+
+        &:hover > .header--boxAll__box--btn {
+          color: black;
+          float: left;
+        }
+
+        &--txt {
+          border: none;
+          background: transparent;
+          outline: none;
+          float: left;
+          padding: 0;
+          color: #FFFFFF;
+          font-size: 16px;
+          transition: 0.4s;
+          width: 0;
+          height: 40px;
+        }
+
+        &--btn {
+          color: #0D0D0D;
+          float: right;
+          width: 40px;
+          height: 40px;
+          font-size: 20px;
+          border-radius: 50%;
+          background: transparent;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+        }
       }
-
-      &:hover > .header--box__btn {
-        color: black;
-        float: left;
-      }
-
-      &__txt {
-        border: none;
-        background: transparent;
-        outline: none;
-        float: left;
-        padding: 0;
-        color: #FFFFFF;
-        font-size: 16px;
-        transition: 0.4s;
-        width: 0;
-        height: 40px;
-      }
-
-      &__btn {
-        color: #0D0D0D;
-        float: right;
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-        border-radius: 50%;
-        background: transparent;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-      }
-    }
-
-    //&--header2 {
-    //  display: flex;
-    //  align-items: center;
-
-      //  &__icon{
-      //    position: relative;
-      //    margin: 0 20px;
-      //    font-size: 20px;
-      //    color: #19272E;
-      //&--input2{
-      //  position: absolute;
-      //  top: 10px;
-      //  right: 10px;
-      //  cursor: pointer;
-      //}
-      //&--icon2{
-      //color: #19272E;
-    }
+    }}
   }
 
