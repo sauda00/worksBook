@@ -10,6 +10,8 @@ import heart from "../../img/heart.png"
 import shoes from "../../img/shoes.png"
 import {Link} from "react-router-dom";
 import axios from "axios";
+import {GoSettings} from "react-icons/go";
+// import "media.scss"
 
 
 const AllBooks = ({books}) => {
@@ -45,9 +47,17 @@ const AllBooks = ({books}) => {
                         Popular
                     </option>
                 </select>
+                <div className="here--books__filter--set">
+                    {/*<a href="#">*/}
+                    {/*    <GoSettings/>*/}
+                    {/*</a>*/}
+                </div>
             </div>
         </div>
         <div className="genres">
+
+
+
             <div className="genres--tab">
                 <div className='genres--tab__theme'>
                     <h3>Genres</h3>
@@ -81,8 +91,10 @@ const AllBooks = ({books}) => {
                     <input type="radio" name='tabs' id="Literature"/>
                     <input type="radio" name='tabs' id="Religion"/>
                 </div>
-
             </div>
+
+
+
             <div className="genres--photo">
 
                     {

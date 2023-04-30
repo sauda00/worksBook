@@ -1,6 +1,7 @@
 import React from 'react';
 import {BsFacebook, BsInstagram, BsLinkedin, BsTelegram, BsTwitter, BsWhatsapp} from "react-icons/bs";
 import {NavLink} from "react-router-dom";
+import "./footmedia.scss"
 
 const Footer = () => {
     return (
