@@ -20,10 +20,10 @@ function App() {
             <Route path={'/useBook'} element={<UseBook/>}/>
             <Route path={'/categories'} element={<Categories/>}/>
             <Route path={'/recent'} element={<NewBooks/>}/>
-            <Route path={'/allBooks/bookShop'} element={<Bookshop/>}/>
+            <Route path={'/allBooks/bookShop/:booksId'} element={<Bookshop/>}/>
             <Route path={'/allBooks/bookShop/yourCart'} element={<YourCart/>}/>
             <Route path={'/yourCart'} element={<YourCart/>}/>
-            <Route path={'/bookShop'} element={<Bookshop/>}/>
+            <Route path={'/bookShop/:booksId'} element={<Bookshop/>}/>
         </Routes>
         <Footer/>
     </div>

@@ -9,16 +9,9 @@ import axios from "axios";
 
 
 const NewBooks = () => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3
-    };
     const [newBooks,setNewBooks] = useState([])
     const getNewBooks =()=>{
-        axios(`https://www.googleapis.com/books/v1/volumes?q=new-Books&key=AIzaSyAaebEgHTVWHIhfiv--MWYjjxsUNyvn0Hc`)
+        axios(`https://www.googleapis.com/books/v1/volumes?q=newBook&key=AIzaSyBBhhQuit1wetBp82EuxuD_6jJKH457OlU`)
             .then(res=>setNewBooks(res.data.items))
     }
     useEffect(()=>{
@@ -32,9 +25,8 @@ const NewBooks = () => {
                         <h1>New Books</h1>
                    
                     <center><div className="newBooks--books">
-                        <Slider {...settings}>
                             {
-                                newBooks.map((el)=>{
+                                newBooks.slice(0,3).map((el)=>{
                                     const img = el.volumeInfo.imageLinks && el.volumeInfo.imageLinks.smallThumbnail
                                     return(
                                         <>
@@ -61,7 +53,6 @@ const NewBooks = () => {
                         {/*    <h2>A New Name: <br/> Septology VI-VII</h2>*/}
                         {/*    <p>by Jon Fosse</p>*/}
                         {/*</div>*/}
-                        </Slider>
                     </div></center>
                 </div>
             </div>

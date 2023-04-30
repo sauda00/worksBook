@@ -1,30 +1,35 @@
 import React, {useEffect, useState} from 'react';
-import mark from "../../img/mark.png"
-import rules from "../../img/rules.png"
-import act from "../../img/act.png"
-import mole from "../../img/mole.png"
-import potter from "../../img/potter.png"
-import us from "../../img/us.png"
-import start from "../../img/start.png"
-import heart from "../../img/heart.png"
-import shoes from "../../img/shoes.png"
+// import mark from "../../img/mark.png"
+// import rules from "../../img/rules.png"
+// import act from "../../img/act.png"
+// import mole from "../../img/mole.png"
+// import potter from "../../img/potter.png"
+// import us from "../../img/us.png"
+// import start from "../../img/start.png"
+// import heart from "../../img/heart.png"
+// import shoes from "../../img/shoes.png"
 import {Link} from "react-router-dom";
 import axios from "axios";
 import {GoSettings} from "react-icons/go";
 // import "media.scss"
 
 
-const AllBooks = ({books}) => {
-    console.log(books)
-    console.log(2)
+const AllBooks = () => {
+    const [sum,setSum] = useState('popular')
   const [allBooks,setAllBooks] = useState([])
-    const getAllBooks = ()=>{
-        axios(`https://www.googleapis.com/books/v1/volumes?q=books-all&key=AIzaSyAaebEgHTVWHIhfiv--MWYjjxsUNyvn0Hc`)
-            .then(res=>setAllBooks(res.data.items))
-    }
-    useEffect(()=>{
-        getAllBooks()
-    },[])
+    useEffect(() => {
+        axios
+            .get(`https://www.googleapis.com/books/v1/volumes?q=${sum}&key=AIzaSyBBhhQuit1wetBp82EuxuD_6jJKH457OlU`)
+            .then((res) => {
+                setAllBooks(res.data.items);
+            })
+
+    }, [sum]);
+
+    const getBook = (e) => {
+        setSum(e.target.value);
+    };
+
     return (
 
         <div id="genres">
@@ -39,13 +44,24 @@ const AllBooks = ({books}) => {
                     <h2>Filters</h2>
                     <a href="#">Clear filters</a>
                 </div>
-                <select className='selec'>
-                    <option>
+                <select value={sum} className='selec' onChange={getBook}>
+                    <option value='pop'>
                         Popular
                     </option>
-                    <option>
-                        Popular
+                    <option value='чингиз'>
+                        Чингиз Айтматов
                     </option>
+
+                    <option value="art">Art</option>
+                    <option value="biography">Biography</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="history">History</option>
+                    <option value="humor">Humor</option>
+                    <option value="poetry">Poetry</option>
+                    <option value="science">Science</option>
+                    <option value="self-help">Self-Help</option>
+                    <option value="travel">Travel</option>
+
                 </select>
                 <div className="here--books__filter--set">
                     {/*<a href="#">*/}
@@ -101,12 +117,11 @@ const AllBooks = ({books}) => {
                         allBooks.map((el)=>{
                             console.log(el)
                             const img = el.volumeInfo.imageLinks && el.volumeInfo.imageLinks.smallThumbnail
-
                             return(
                                 <>
                                 <div className="genres--photo__table">
-                                    <Link to={'/allBooks/bookShop'}>
-                                    <img style={{borderRadius:'10px'}} width={200} height={300} src={img} alt=""/>
+                                    <Link to={`/allBooks/bookShop/${el.id}`}>
+                                            <img style={{borderRadius:'10px'}} width={200} height={300} src={img} alt=""/>
                                     <h3 style={{width:'200px'}}>{el.volumeInfo.title}</h3>
                                     </Link>
                                 </div>

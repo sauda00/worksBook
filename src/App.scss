@@ -9,14 +9,17 @@
 @import "../src/style/bookShop";
 @import "../src/style/yourCart";
 @import "../src/style/allbooks";
+
+@import "../src/style/media/media";
+
 @import "../src/components/AllBooks/media";
+
 
 
 body,html{
   scroll-behavior: smooth;
   font-family: "Public Sans",sans-serif;
 }
-
 
 
 #error{

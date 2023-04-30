@@ -18,10 +18,11 @@ const SwiperBooks = () => {
         slidesToShow: 4,
         slidesToScroll:2
     };
+    console.log(settings)
 
     const [swBooks,setSwBooks] = useState([])
     const getSwBooks = ()=>{
-        axios(`https://www.googleapis.com/books/v1/volumes?q=books-all&key=AIzaSyAaebEgHTVWHIhfiv--MWYjjxsUNyvn0Hc`)
+        axios(`https://www.googleapis.com/books/v1/volumes?q=books-all&key=AIzaSyBBhhQuit1wetBp82EuxuD_6jJKH457OlU`)
             .then(res=>setSwBooks(res.data.items))
     }
 useEffect(()=>{
@@ -43,12 +44,12 @@ useEffect(()=>{
                                 swBooks.map((el)=>{
                                     const img = el.volumeInfo.imageLinks && el.volumeInfo.imageLinks.smallThumbnail
                                     return(
-                                        <>
+
                                         <div className="swiperBooks--swiper__card">
                                             <img width={200} height={300} src={img} alt=""/>
                                             <h3>{el.volumeInfo.title}</h3>
                                         </div>
-                                        </>
+
                                     )
                                 })
                             }

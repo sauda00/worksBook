@@ -16,8 +16,12 @@ const YourCart = () => {
                 <div className="yourCart">
                     <div className="yourCart--about">
                         <h1>YourCart</h1>
+
+                            <p>Not ready to checkout? <Link to={'/allBooks/bookShop/:booksId'}><span>Continue Shopping</span></Link> </p>
+
                         <p>Not ready to checkout? <Link to={'/allBooks/bookShop'}><span>Continue Shopping</span></Link>
                         </p>
+
                     </div>
                     <div className="yourCart--cardsAll">
                         <div className="yourCart--cardsAll__cards">
