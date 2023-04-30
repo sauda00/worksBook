@@ -41,7 +41,6 @@ const NewBooks = () => {
                                             <div className="newBooks--books__card">
                                                 <img width={200} src={img} alt=""/>
                                                 <h3>{el.volumeInfo.title}</h3>
-
                                             </div>
                                         </>
                                     )
