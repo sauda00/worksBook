@@ -37,22 +37,23 @@
       align-items: center;
       a{margin-left: 10px}
       &__box {
-        position: absolute;
-        top: -25%;
-        right: 8%;
-        height: 40px;
-        transform: translate(-25%, 50%);
+        //position: absolute;
+        //top: -25%;
+        //right: 8%;
+        //height: 40px;
+        //transform: translate(-25%, 50%);
         background: transparent;
         border-radius: 30px;
         padding: 10px;
+        font-size: 10px;
 
         &:hover {
-          background: aqua;
+          //background: aqua;
         }
 
         &:hover > .header--boxAll__box--txt {
           width: 150px;
-          padding: 0 6px;
+          padding: 0 5px;
           background: #19272E;
           border-radius: 30px;
           border: 1px solid green;

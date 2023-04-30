@@ -10,14 +10,4 @@
 //    }
 //  }
 //}
-@media (max-width: 1139px) {
-  .container{width: 1024px;}
-}
-@media (max-width: 1023px) {
-  .container{width: 910px}
-  .useBook--testBook{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
+
