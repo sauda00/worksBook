@@ -1,21 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import card from '../../img/books-hero.png'
 import card1 from '../../img/cards-1.png'
 import card2 from '../../img/cards-2.png'
-import { AiOutlineRight } from "react-icons/ai";
+import {AiOutlineRight} from "react-icons/ai";
 import {Link} from "react-router-dom";
 
 
-
 const YourCart = () => {
-    return (
+    const [accordion,setAccordion] = useState(true)
+    const [selectt,setSelectt] = useState(false)
+        return (
         <div id='yourCart'>
             <div className="container">
                 <div className="yourCart">
                     <div className="yourCart--about">
                         <h1>YourCart</h1>
+
                             <p>Not ready to checkout? <Link to={'/allBooks/bookShop/:booksId'}><span>Continue Shopping</span></Link> </p>
+
+                        <p>Not ready to checkout? <Link to={'/allBooks/bookShop'}><span>Continue Shopping</span></Link>
+                        </p>
+
                     </div>
                     <div className="yourCart--cardsAll">
                         <div className="yourCart--cardsAll__cards">
@@ -53,12 +59,62 @@ const YourCart = () => {
                         <div className="yourCart--cardsAll__summary">
                             <h1>Order Summary</h1>
                             <div className="yourCart--cardsAll__summary--shoping">
-                                <p>Shipping</p>
-                                <h6>Select Method <AiOutlineRight/></h6>
+                                <details>
+                                    <div>
+                                        <select>
+                                            <option>BAI TUSHUM BANK</option>
+                                            <option>KEREMET BANK</option>
+                                            <option>OPTIMA BANK</option>
+                                            <option>KYRZSTAN BANK</option>
+                                            <option>MBANK BANK</option>
+                                            <option>BAKAI BANK</option>
+                                            <option>DEMIR BANK</option>
+                                        </select>
+                                        <input type={"number"} placeholder="Номер Карты"/> <br/>
+                                        <input type={"number"} placeholder="Сумма Перевода"/> <br/>
+                                        <input type={"text"} placeholder="Фамилия Имия"/>
+                                    </div>
+                                    <summary>
+                                        <p>transfer by card</p>
+                                        <h6 className="h6">Select Method<AiOutlineRight
+                                            onClick={() => setAccordion(!accordion)}
+                                            style={{
+                                                transform: accordion ? "" : "rotate(90deg)",
+                                            }}
+                                        /></h6>
+                                    </summary>
+                                </details>
                             </div>
                             <div className="yourCart--cardsAll__summary--shoping">
-                                <p>Shipping</p>
-                                <h6>Select Method <AiOutlineRight/></h6>
+
+
+                                <details>
+                                    <div>
+                                        <select>
+                                            <option>BAI TUSHUM BANK</option>
+                                            <option>KEREMET BANK</option>
+                                            <option>OPTIMA BANK</option>
+                                            <option>KYRZSTAN BANK</option>
+                                            <option>MBANK BANK</option>
+                                            <option>BAKAI BANK</option>
+                                            <option>DEMIR BANK</option>
+                                        </select>
+                                        <input type={"number"} placeholder="Сумма Перевода"/> <br/>
+                                        <input type={"number"} placeholder="Номер Реквизита"/> <br/>
+                                        <input type={"text"} placeholder="Фамилия Имия"/>
+                                    </div>
+                                    <summary>
+                                        <p>transfer by card</p>
+                                        <h6>Select Method
+                                            <AiOutlineRight
+                                            onClick={() => setAccordion(!accordion)}
+                                            style={{
+                                                transform: accordion ? "" : "rotate(90deg)",
+                                            }}
+                                        />
+                                        </h6>
+                                    </summary>
+                                </details>
                             </div>
                             <div className="yourCart--cardsAll__summary--total">
                                 <p>Total</p>
@@ -67,15 +123,12 @@ const YourCart = () => {
                             <button>Continue to checkout</button>
                         </div>
                     </div>
-
                 </div>
             </div>
 
         </div>
     );
 };
-
-
 
 
 export default YourCart;

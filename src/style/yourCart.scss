@@ -100,9 +100,7 @@ padding: 70px 0;
           height: 50px;
           cursor: pointer;
         }
-
         padding-top: 35px;
-
         h1 {
           font-weight: 600;
           font-size: 22px;
@@ -122,6 +120,39 @@ padding: 70px 0;
             color: #0D0D0D;
             padding: 17px 0;
           }
+          details{
+            border-bottom: 2px solid  #19272E;
+            cursor: pointer;
+            width: 100%;
+            &{
+              select{
+                padding: 5px 10px;
+                outline: none;
+                option{
+                  outline: none;
+                }
+              }
+              input{
+                border: 2px solid rgba(0, 0, 0, 0.81);
+                border-radius: 5px;
+                width: 93%;
+                height: 30px;
+                margin: 5px 0;
+                padding: 0 10px;
+              }
+              button{
+                background: black;
+                width: 200px;
+                height: 35px;
+                margin-left: 20px;
+              }
+            }
+            summary{
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+            }
+          }
 
           h6 {
             font-weight: 400;
@@ -131,13 +162,10 @@ padding: 70px 0;
             align-items: center;
           }
         }
-
         &--total {
           display: flex;
           gap: 285px;
           padding-top: 30px;
-          border-top: 1px solid black;
-
           p {
             font-weight: 400;
             font-size: 14px;
