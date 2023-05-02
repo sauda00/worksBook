@@ -6,6 +6,11 @@ import card2 from '../../img/cards-2.png'
 import {AiOutlineRight} from "react-icons/ai";
 import {Link} from "react-router-dom";
 
+import BookShop from "../Bookshop";
+
+
+
+
 
 const YourCart = () => {
     const [accordion,setAccordion] = useState(true)
@@ -19,12 +24,12 @@ const YourCart = () => {
 
                             <p>Not ready to checkout? <Link to={'/allBooks/bookShop/:booksId'}><span>Continue Shopping</span></Link> </p>
 
-                        <p>Not ready to checkout? <Link to={'/allBooks/bookShop'}><span>Continue Shopping</span></Link>
-                        </p>
+
 
                     </div>
                     <div className="yourCart--cardsAll">
                         <div className="yourCart--cardsAll__cards">
+
                             <div className="yourCart--cardsAll__cards--card">
                                 <img src={card} alt=""/>
                                 <div className="yourCart--cardsAll__cards--card__imgTitle">

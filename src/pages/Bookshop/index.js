@@ -2,13 +2,16 @@ import React, {useEffect, useState} from 'react';
 import { AiOutlineHeart } from "react-icons/ai";
 import { AiOutlineShareAlt } from "react-icons/ai";
 // import book from '../../img/books-hero.png'
-import {Link, NavLink, useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import axios from "axios";
+
+// import axios from "axios";
 
 
 
 
 const BookShop = () => {
+
     const [num, setNum] = useState(1)
     const [sum, setSum] = useState(99)
     const increment=()=>{
@@ -21,44 +24,37 @@ const BookShop = () => {
     }
 
 
-    const [books,setBooks] = useState([])
-const booksId = useParams()
-    const getBooks =(booksId)=>{
-        axios(`https://books.google.com/books?id=${booksId}`)
-            .then((res)=>setBooks(res))
+    const [books,setBooks] = useState({})
+const {booksId} = useParams()
+    const getBooks =()=>{
+        axios(`https://www.googleapis.com/books/v1/volumes/${booksId}`)
+            .then((res)=>setBooks(res.data))
     }
     useEffect(()=>{
-        getBooks(booksId)
+        getBooks()
     },[])
-    console.log(books)
+
 
     return (
         <div id='bookShop'>
             <div className="container">
                 <div className="bookShop">
-                    {
-                        books.map((el)=>{
-                            console.log(el)
-                            // const img = el.volumeInfo.imageLinks && el.volumeInfo.imageLinks.smallThumbnail
-                            // return(
-                            //     <img width={300} src={img} alt=""/>
-                            //
-                            // )
-                        })
-                    }
+                    {/*<h1>{books && books.volumeInfo && books.volumeInfo.title}</h1>*/}
 
+                    <img width={300} height={450}
+                         src={`https://books.google.com/books/content?id=${booksId}&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api`}
+                         alt={books.volumeInfo?.title}
+                    />
                     {/*<img src={book} alt=""/>*/}
                     <div className="bookShop--about">
                         <div className="bookShop--about__title">
-                            <h1>THE BOY, THE MOLE, THE FOX AND THE HORSE</h1>
+                            <h1>{books.volumeInfo?.title}</h1>
                             <AiOutlineHeart className='aioutline'/>
                             <AiOutlineShareAlt className='aioutline'/>
                         </div>
 
-                        <span>by Charlie Mackesy</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua.</p>
+                        <span>{books.volumeInfo?.authors}</span>
+                        <p>{books.volumeInfo?.description.slice(0,135)}</p>
                         <h4>${sum}</h4>
                         <div className="bookShop--about__btn">
                            <Link to={'/allBooks/bookShop/yourCart'}><button>Add to Cart </button></Link>
@@ -72,5 +68,6 @@ const booksId = useParams()
         </div>
     );
 };
+
 
 export default BookShop;
