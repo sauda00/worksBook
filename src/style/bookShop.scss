@@ -8,19 +8,18 @@
     &--about{
       &__title{
         display: flex;
-        align-items:flex-start;
+        align-items:baseline;
         h1{
-          width: 300px;
-          height: 44px;
           font-weight: 700;
-          font-size: 20px;
+          font-size: 36px;
           line-height: 120%;
           color: #19272E;
           padding: 0 10px 10px 0;
         }
         .aioutline{
-          font-size: 20px;
+          font-size: 23px;
           padding: 0 5px;
+          cursor: pointer;
         }
       }
       span{
@@ -75,25 +74,3 @@
 }
 
 
-@media(max-width:1040px ){
-  .container{width: 960px}
-}
-@media (max-width:959px ) {
-  .container{width:840px }
-  #bookShop .bookShop--about button {
-    width: 320px;
-  }
-}
-@media (max-width:839px ) {
-  .container{width:710px }
-  #bookShop .bookShop {
-    flex-direction: column;
-    gap: 50px;
-    &--about{
-      margin-left: 99px;
-      p{
-        width: 385px;
-      }
-    }
-  }
-}

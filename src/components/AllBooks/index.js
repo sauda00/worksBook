@@ -11,6 +11,9 @@ import React, {useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
 import axios from "axios";
 import {GoSettings} from "react-icons/go";
+import BookCard from "../BookCard";
+
+
 // import "media.scss"
 
 
@@ -19,7 +22,7 @@ const AllBooks = () => {
   const [allBooks,setAllBooks] = useState([])
     useEffect(() => {
         axios
-            .get(`https://www.googleapis.com/books/v1/volumes?q=${sum}&key=AIzaSyBBhhQuit1wetBp82EuxuD_6jJKH457OlU`)
+            .get(`https://www.googleapis.com/books/v1/volumes?q=${sum}&key=AIzaSyBBhhQuit1wetBp82EuxuD_6jJKH457OlU&maxResults=12`)
             .then((res) => {
                 setAllBooks(res.data.items);
             })
@@ -29,7 +32,6 @@ const AllBooks = () => {
     const getBook = (e) => {
         setSum(e.target.value);
     };
-
     return (
 
         <div id="genres">
@@ -63,11 +65,11 @@ const AllBooks = () => {
                     <option value="travel">Travel</option>
 
                 </select>
-                <div className="here--books__filter--set">
-                    {/*<a href="#">*/}
-                    {/*    <GoSettings/>*/}
-                    {/*</a>*/}
-                </div>
+                {/*<div className="here--books__filter--set">*/}
+                {/*    <a href="#">*/}
+                {/*        <GoSettings/>*/}
+                {/*    </a>*/}
+                {/*</div>*/}
             </div>
         </div>
         <div className="genres">
@@ -112,20 +114,20 @@ const AllBooks = () => {
 
 
             <div className="genres--photo">
-
                     {
+
                         allBooks.map((el)=>{
                             console.log(el)
                             const img = el.volumeInfo.imageLinks && el.volumeInfo.imageLinks.smallThumbnail
                             return(
-                                <>
                                 <div className="genres--photo__table">
-                                    <Link to={`/allBooks/bookShop/${el.id}`}>
-                                            <img style={{borderRadius:'10px'}} width={200} height={300} src={img} alt=""/>
-                                    <h3 style={{width:'200px'}}>{el.volumeInfo.title}</h3>
-                                    </Link>
+                                    <BookCard el={el}/>
+                                    {/*<BookShop el={el}/>*/}
+                                    {/*<Link to={`/allBooks/bookShop/${el.id}`}>*/}
+                                    {/*        <img style={{borderRadius:'10px'}} width={200} height={300} src={img} alt=""/>*/}
+                                    {/*<h3 style={{width:'200px'}}>{el.volumeInfo.title}</h3>*/}
+                                    {/*</Link>*/}
                                 </div>
-                                </>
                             )
                         })
                     }
