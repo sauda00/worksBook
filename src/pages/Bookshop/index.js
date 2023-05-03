@@ -26,7 +26,7 @@ const {booksId} = useParams()
             <div className="container">
                 <div className="bookShop">
                     {/*<h1>{books && books.volumeInfo && books.volumeInfo.title}</h1>*/}
-                    <img width={300} height={450}
+                    <img style={{borderRadius:'10px'}} width={300} height={450}
                          src={`https://books.google.com/books/content?id=${booksId}&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api`}
                          alt={books.volumeInfo?.title}
                     />
