@@ -6,7 +6,6 @@
       align-items: center;
       justify-content: space-between;
       h1{
-        margin-left: 40px;
         padding: 20px 0;
         font-style: normal;
         font-weight: 500;
@@ -72,6 +71,56 @@
 }
 @media (max-width: 939px) {
   .container{
-    width: 820px;}
+    width: 920px;}
+}
+@media (max-width: 912px) {
+  .container{
+    max-width: 886px;
+  }
+  #swiperBooks .swiperBooks--swiper {
+    width: 871px;
+  }
+}
+@media (max-width: 865px) {
+  .container{
+    max-width: 845px;
+  }
+  #swiperBooks .swiperBooks--swiper {
+    width: 871px;
+  }
+}
+@media (max-width: 856px) {
+  .container{
+    max-width: 839px;
+  }
+  #swiperBooks .swiperBooks--swiper {
+    width: 800px;
+  }
+}
 
+@media (max-width: 824px) {
+  .container{
+    max-width: 808px;
+  }
+  #swiperBooks .swiperBooks--text h3 {
+    margin-right: 40px;
+  }
+  #swiperBooks .swiperBooks--swiper {
+    width: 890px;
+  }
+}
+@media (max-width: 704px) {
+
+  }
+@media (max-width: 619px) {
+  .container{
+    max-width: 590px;
+  }
+}@media (max-width: 558px) {
+  .container{
+    max-width: 565px;
+  }
+  newBooks .newBooks--books {
+    flex-direction: column;
+  }
 }

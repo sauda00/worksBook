@@ -9,7 +9,7 @@ import {Link} from "react-router-dom";
 
 const YourCart = () => {
     const [accordion,setAccordion] = useState(true)
-    const [selectt,setSelectt] = useState(false)
+    // const [selectt,setSelectt] = useState(false)
         return (
         <div id='yourCart'>
             <div className="container">
@@ -72,7 +72,7 @@ const YourCart = () => {
                                         </select>
                                         <input type={"number"} placeholder="Номер Карты"/> <br/>
                                         <input type={"number"} placeholder="Сумма Перевода"/> <br/>
-                                        <input type={"text"} placeholder="Фамилия Имия"/>
+                                        <input type={"text"} placeholder="Фамилия Имя"/>
                                     </div>
                                     <summary>
                                         <p>transfer by card</p>
@@ -101,7 +101,7 @@ const YourCart = () => {
                                         </select>
                                         <input type={"number"} placeholder="Сумма Перевода"/> <br/>
                                         <input type={"number"} placeholder="Номер Реквизита"/> <br/>
-                                        <input type={"text"} placeholder="Фамилия Имия"/>
+                                        <input type={"text"} placeholder="Фамилия Имя"/>
                                     </div>
                                     <summary>
                                         <p>transfer by card</p>
@@ -125,7 +125,6 @@ const YourCart = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     );
 };
