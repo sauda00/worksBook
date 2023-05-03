@@ -17,12 +17,12 @@
       align-items: center;
       justify-content: space-between;
       .active {
-        color: #818EEA;
+        color: #2c41d9;
       }
 
       a {
         padding: 0 20px;
-        font-size: 19px;
+        font-size: 20px;
         line-height: 20px;
         color: #19272E;
 
@@ -52,18 +52,6 @@
         border-radius: 30px;
         padding: 10px;
         font-size: 10px;
-
-        //&:hover {
-        //  background: aqua;
-        //}
-
-        &:hover > .header--boxAll__box--txt {
-          width: 150px;
-          padding: 0 5px;
-          background: #19272E;
-          border-radius: 30px;
-          border: 1px solid green;
-        }
 
         &:hover > .header--boxAll__box--btn {
           color: black;
@@ -112,13 +100,13 @@
   .burger{
     display: none;
     position: absolute;
-    background: #818EEA;
-    padding: 25px 40px;
+    background: #4e5cc4;
+    padding: 40px 40px;
     border-radius: 10px;
+    margin:30px 0 0 0;
     &--close{
       position: absolute;
-      margin: -19px 0 0 112px;
-      font-weight: 600;
+      margin: -35px 0 0 104px;
       color: white;
     }
    &--menu{
