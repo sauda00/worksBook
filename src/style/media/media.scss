@@ -1,0 +1,258 @@
+
+//home
+@media (max-width: 1140px) {
+  .container{
+    //width: 1024px;
+  }
+  .header--boxAll__box{
+    margin-left: -143px;
+  }
+  #swiperBooks .swiperBooks--swiper {
+    width: 990px;
+  }
+  #header .header--boxAll__box{
+    right: 4%;
+  }
+}
+@media (max-width: 1024px) {
+  .container{
+    width: 910px;
+  }
+   #genres{
+     .genres{
+       justify-content: space-around;
+       margin-right: 15px;
+       &--photo{
+         width: 720px;
+       }
+     }
+     .here--books__filter{
+       width: 97%;
+     }
+   }
+
+  #swiperBooks .swiperBooks--swiper {
+    width: 890px;
+  }
+  #Page .page--photo{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 41px;
+  }
+}
+@media (max-width: 919px) {
+  .container{
+    width: 840px;
+  }
+  #swiperBooks .swiperBooks--swiper {
+    width: 810px;
+  }
+  #swiperBooks .swiperBooks--swiper__card img{
+    width: 180px;
+    height: 280px;
+  }
+  #useBook .useBook--testBook {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 839px) {
+  .container{
+    width: 710px;
+  }
+  #genres .genres--photo {
+    width: 485px;
+  }
+  #genres .here--books__filter{
+    margin: 0 15px;
+  }
+  #genres .here--books{
+    padding: 30px 20px;
+  }
+  #swiperBooks .swiperBooks--swiper {
+    width: 685px;
+  }
+  #Page .page--photo{
+    gap: 35px;
+  }
+  .newBooks--books__card img{
+    width: 180px;
+  }
+  #newBooks .newBooks h3{
+    width: 180px;
+  }
+}
+@media (max-width: 709px) {
+  .container{
+    width: 640px;
+  }
+  #genres .genres--tab{
+    display: none;
+  }
+  #genres .here--books__filter--clear{
+    display: none;
+  }
+  .here--books__filter--hp{
+    display: flex;
+  }
+  #genres .genres--win{
+    display: flex;
+  button{
+    svg{
+      font-size: 26px;
+      background: white;
+    }
+  }
+  }
+  #genres .here--books p{
+    //display: none;
+  }
+  #genres .here--books{
+    display: none;
+  }
+  #genres .here--books__filter
+  #genres .here--books__filter{
+    width: 575px;
+  }
+  #genres .here--books__filter--hp{
+    display: flex;
+  }
+  #genres .genres--photo{
+    width: 546px;
+  }
+  #genres .here--books__filter--href{
+    display: flex;
+    align-items: center;
+
+    //box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    //padding: 30px 0;
+    //position: sticky;
+    //top: 0;
+    //backdrop-filter: blur(10px);
+    //width: 100%;
+    //z-index: 2;
+    a{
+      padding: 0 16px;
+      font-family: 'Public Sans', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: -0.4px;
+      text-decoration-line: underline;
+      color: #818EEA;
+    }
+  }
+  #genres .genres--tab__put{
+    top: 195px;
+  }
+  #genres .here--books__filter select{
+    margin-right: -40%;
+  }
+  #genres .genres--cup{
+    display: flex;
+    flex-direction: column;
+  }
+  #genres .genres--win .modal-content{
+    width: 45%;
+    height: 53%;
+  }
+  .header--header1__menu{
+    display: none;
+  }
+  #header .header{
+    justify-content: space-around;
+  }
+  #header{
+    padding: 5px 0;
+  }
+  #Page .page--photo{
+    justify-content: center;
+    gap: 70px;
+  }
+  .newBooks--books__card img{
+    width: 170px;
+  }
+  #swiperBooks .swiperBooks--swiper {
+    width: 595px;
+  }
+}
+@media (max-width: 640px) {
+  .container{
+    width: 576px;
+  }
+  #genres .genres{
+    justify-content: normal;
+    margin: 0 20px;
+  }
+  #genres .here--books__filter{
+    width: 535px;
+  }
+  #genres .genres--win .modal-content{
+    margin: 15% 30px;
+  }
+  #genres .genres--tab__app{
+    padding: 10px 30px;
+  }
+  #genres .here--books__filter select{
+    width: 20%;
+  }
+  //#genres .genres--tab__put {
+  //  top: 186px;
+  //}
+  #genres .genres--tab__put {
+    top: 175px;
+  }
+
+}
+@media (max-width: 575px) {
+  .container{
+    width: 480px;
+  }
+  #genres .here--books__filter {
+    width: 404px;
+  }
+  #genres .here--books__filter select {
+    margin-right: -5%;
+    width: 34%;
+  }
+  //#genres .here--books__filter select{
+  //
+  //}
+
+}
+@media (max-width: 482px) {
+  .container{
+    width: 320px;
+  }
+  #genres .genres--tab__put{
+    width: 179px;
+  }
+  #genres .here--books__filter{
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    gap: 15px;
+  }
+  #genres .genres--photo{
+    justify-content: center;
+  }
+  #genres .here--books__filter select{
+    padding: 5px;
+  }
+  #genres .genres--tab__put input{
+    margin: 11px 0;
+  }
+  #genres .here--books__filter--href{
+    align-items: start;
+    flex-direction: column;
+    a{
+      padding: 0 0;
+    }
+  }
+  #genres .genres--tab__put{
+    top: 143px;
+  }
+}
+
+
