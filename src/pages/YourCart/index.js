@@ -27,12 +27,14 @@ const doneModals = document.querySelector('.doneModals')
 const doneBg = document.querySelector('.doneBg')
 doneModals.style.display='block'
 doneBg.style.display='block'
+
 }
 const doneModalTwo =()=>{
     const doneModals = document.querySelector('.doneModals')
     const doneBg = document.querySelector('.doneBg')
     doneModals.style.display='none'
     doneBg.style.display='none'
+
 
 }
     const {booksId} = useParams()
@@ -46,7 +48,22 @@ const doneModalTwo =()=>{
     useEffect(()=>{
         getBooks()
     },[])
-    console.log(bookImg)
+   const adapBtn2 =()=>{
+        const btn = document.querySelector('.yourCart--cardsAll__summary')
+        const btnBg = document.querySelector('.adapBg')
+        const btnClose = document.querySelector('.adapBtnClose')
+       btn.style.display='block'
+       btnBg.style.display='block'
+       btnClose.style.display='block'
+   }
+   const adapBtnClose=()=>{
+       const btn = document.querySelector('.yourCart--cardsAll__summary')
+       const btnBg = document.querySelector('.adapBg')
+       const btnClose = document.querySelector('.adapBtnClose')
+       btn.style.display='none'
+       btnBg.style.display='none'
+       btnClose.style.display='none'
+   }
         return (
         <div id='yourCart'>
             <div className="container">
@@ -97,6 +114,7 @@ const doneModalTwo =()=>{
                         </div>
                         <div className="yourCart--cardsAll__summary">
                             <h1>Order Summary</h1>
+                            <h3 onClick={adapBtnClose} className='adapBtnClose' style={{position:"absolute",margin:'-94px 0 0 350px',display:'none'}}>&#x2715;</h3>
                             <div className="yourCart--cardsAll__summary--shoping">
                                 <details>
                                     <div>
@@ -163,10 +181,12 @@ const doneModalTwo =()=>{
                         </div>
                     </div>
                 </div>
-                <div className="doneModals" style={{position:'fixed',top:230,left:430,zIndex:2,display:'none'}}>
-                    <img onClick={doneModalTwo} width={500} src={doneImg} style={{cursor:'pointer'}} alt=""/>
+                <div className="doneModals">
+                    <img onClick={doneModalTwo} width={500} src={doneImg} style={{cursor:'pointer',borderRadius:'20px'}} alt=""/>
                 </div>
-                <div className="doneBg" style={{position:'fixed',background:'green',top:'0',left:'0',right:'0',bottom:'0',display:'none'}}></div>
+                <div className="doneBg" style={{position:'fixed',background:'green',top:'0',left:'0',right:'0',bottom:'0',display:'none',zIndex:2}}></div>
+                <center><button onClick={adapBtn2} className='adapBtn'>Continue to checkout</button></center>
+                <div className="adapBg" style={{position:"fixed",left:'0',top:'0',right:'0',bottom:'0',background:"white",zIndex:1,display:"none"}}></div>
             </div>
         </div>
     );

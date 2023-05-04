@@ -12,6 +12,7 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 // import {GoSettings} from "react-icons/go";
 import BookCard from "../BookCard";
+import {GoSettings} from "react-icons/go";
 
 
 // import "media.scss"

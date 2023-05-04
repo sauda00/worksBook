@@ -43,6 +43,7 @@ padding: 70px 0;
           img {
             width: 240px;
             height: 360px;
+            border-radius: 10px;
           }
 
           &__imgTitle {
@@ -182,5 +183,23 @@ padding: 70px 0;
         }
       }
     }
+  }
+  .doneModals{
+    position:fixed;
+    top: 230px;
+    left: 430px;
+    z-index:3;
+    display:none;
+    border-radius: 20px;
+  }
+  .adapBtn{
+    background: #818EEA;
+    border-radius: 8px;
+    color: white;
+    width: 360px;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 80px;
+    display: none;
   }
 }
