@@ -1,61 +1,62 @@
-@media (max-width: 1140px) {
-  .container{
-    //width: 1065px;
-  }
-}
-@media (max-width: 1200px) {
-  .container {
-    width: 1065px;
-    //width: 913px;
-  }
-}
-
-@media (max-width: 820px){
-  .container{
-    //width: 913px;
-
-    width: 703px;
-  }
-  #genres{
-    .genres{
-      &--photo{
-        justify-content: space-around;
-      }
-    }
-  }
-}
-
-@media (max-width: 640px){
-  #genres{
-    .here{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      &--books{
-        p{
-          display: none;
-        }
-        &__filter{
-          justify-content: space-around;
-          &--clear{
-            display: none;
-          }
-          &--set{
-            font-size: 50px;
-          }
-        }
-      }
-    }
-    .genres{
-      &--photo{
-        width: 528px;
-      }
-      &--tab{
-
-      }
-    }
-  }
-}
+//@media (max-width: 1140px) {
+//  .container{
+//    //width: 1065px;
+//  }
+//}
+//@media (max-width: 1200px) {
+//  .container {
+//    //width: 1065px;
+//    //width: 913px;
+//  }
+//}
+//
+//
+//@media (max-width: 820px){
+//  .container{
+//    //width: 913px;
+//
+//    width: 703px;
+//  }
+//  #genres{
+//    .genres{
+//      &--photo{
+//        justify-content: space-around;
+//      }
+//    }
+//  }
+//}
+//
+//@media (max-width: 640px){
+//  #genres{
+//    .here{
+//      display: flex;
+//      justify-content: space-between;
+//      align-items: center;
+//      &--books{
+//        p{
+//          display: none;
+//        }
+//        &__filter{
+//          justify-content: space-around;
+//          &--clear{
+//            display: none;
+//          }
+//          &--set{
+//            font-size: 50px;
+//          }
+//        }
+//      }
+//    }
+//    .genres{
+//      &--photo{
+//        width: 528px;
+//      }
+//      &--tab{
+//
+//      }
+//    }
+//  }
+//}
 //@media (max-width: 530px){
 //  #genres{
 //    .here{
