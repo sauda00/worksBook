@@ -129,7 +129,7 @@ const doneModalTwo =()=>{
                                         </select>
                                         <input type={"number"} placeholder="Номер Карты"/> <br/>
                                         <input type={"number"} placeholder="Сумма Перевода"/> <br/>
-                                        <input type={"text"} placeholder="Фамилия Имия"/>
+                                        <input type={"text"} placeholder="Фамилия Имя"/>
                                     </div>
                                     <summary>
                                         <p>Payment card</p>
@@ -158,7 +158,7 @@ const doneModalTwo =()=>{
                                         </select>
                                         <input type={"number"} placeholder="Сумма Перевода"/> <br/>
                                         <input type={"number"} placeholder="Номер Реквизита"/> <br/>
-                                        <input type={"text"} placeholder="Фамилия Имия"/>
+                                        <input type={"text"} placeholder="Фамилия Имя"/>
                                     </div>
                                     <summary>
                                         <p>Cash</p>

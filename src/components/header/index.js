@@ -1,6 +1,10 @@
 import React, {useState} from 'react';
-import {BiBorderAll, BiSearch} from "react-icons/bi";
+import { BiSearch} from "react-icons/bi";
 import {BsBag} from "react-icons/bs";
+import { NavLink} from "react-router-dom";
+import axios from "axios";
+import AllBooks from "../AllBooks";
+=======
 import {Navigate, NavLink} from "react-router-dom";
 // import axios from "axios";
 // import AllBooks from "../AllBooks";
@@ -75,6 +79,7 @@ const Header = () => {
                                             <div className="header--boxAll__box">
                                                 <input className='header--boxAll__box--txt' type="text" placeholder="search"/>
                                                 <a className="header--boxAll__box--btn" href="#">
+                                                    <BiSearch/>
                                                     <BiSearch onClick={input}/>
                                                 </a>
                                                 <NavLink to={'/yourCart'}>
@@ -82,6 +87,11 @@ const Header = () => {
                                                 </NavLink>
                                             </div>
                                         </div>
+                                    </div>
+                                 </div>
+                                </div>
+                    )
+                }
 
                                     </div>
                         <div className="www" onClick={burger}>
