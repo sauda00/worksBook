@@ -8,9 +8,9 @@ import React, {useEffect, useState} from 'react';
 // import start from "../../img/start.png"
 // import heart from "../../img/heart.png"
 // import shoes from "../../img/shoes.png"
-import {Link} from "react-router-dom";
+// import {Link} from "react-router-dom";
 import axios from "axios";
-import {GoSettings} from "react-icons/go";
+// import {GoSettings} from "react-icons/go";
 import BookCard from "../BookCard";
 
 
@@ -118,7 +118,7 @@ const AllBooks = () => {
 
                         allBooks.map((el)=>{
                             console.log(el)
-                            const img = el.volumeInfo.imageLinks && el.volumeInfo.imageLinks.smallThumbnail
+                            // const img = el.volumeInfo.imageLinks && el.volumeInfo.imageLinks.smallThumbnail
                             return(
                                 <div className="genres--photo__table">
                                     <BookCard el={el}/>
