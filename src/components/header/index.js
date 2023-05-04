@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import {BiBorderAll, BiSearch} from "react-icons/bi";
+import { BiSearch} from "react-icons/bi";
 import {BsBag} from "react-icons/bs";
-import {Navigate, NavLink} from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import axios from "axios";
 import AllBooks from "../AllBooks";
 

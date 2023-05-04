@@ -109,18 +109,26 @@
     width: 890px;
   }
 }
-@media (max-width: 704px) {
-
+@media (max-width: 701px) {
+.container{
+max-width: 686px;
+}
   }
+@media (max-width: 644px) {
+  .container{
+    max-width: 610px;
+  }
+  #swiperBooks .swiperBooks--text h3 {
+    margin-right: 91px;
+  }
+}
 @media (max-width: 619px) {
   .container{
     max-width: 590px;
   }
-}@media (max-width: 558px) {
+}
+@media (max-width: 571px) {
   .container{
-    max-width: 565px;
-  }
-  newBooks .newBooks--books {
-    flex-direction: column;
+    max-width: 560px;
   }
 }
